@@ -34,6 +34,27 @@ export default {
 
     .nav-logo{
         margin: 10px 0;
+        opacity: 60%;
+
+        h2{
+            margin:  0;
+            
+            span{
+                padding: 7.5px 0;
+                padding-right: 5px;
+            }
+        }
+
+        span:first-child{ 
+            color: $colorCube_blueLagoon;
+            background-color: $colorCube_blueLagoonAlpha;
+            padding-left: 20px;
+            border-radius: 44% 0 0 44%;
+        }
+
+        span:last-chlid{ 
+            padding-left: 2px;
+        }
     }
 
     .links{
@@ -50,6 +71,9 @@ export default {
                 color: white;
                 text-decoration: none;
             }
+            a:hover{
+                cursor: pointer;
+            }
         }
     }
 
@@ -58,6 +82,11 @@ export default {
         padding: 12px 20px;
         background-color: $colorCube_blueLagoon;
         border-radius: 3px;
+    }
+
+    .btn-get-in-touch:hover{ 
+        transform: scale(1.02);
+        cursor: pointer;
     }
 
 </style>
