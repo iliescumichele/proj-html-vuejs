@@ -9,3 +9,27 @@
     width: 75%;
     margin: 0 auto;
 }
+
+.float-left{
+    float: left;
+}
+
+.float-right{
+    float: right;
+}
+
+.clearfix::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+
+
+.dbg{
+    background-color: rgba(255, 132, 0, 0.585);
+}
+
+.dbgg{
+    background-color: rgba(255, 60, 0, 0.585);
+}
