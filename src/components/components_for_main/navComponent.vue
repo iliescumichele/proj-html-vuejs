@@ -1,19 +1,33 @@
 <template>
-  <nav class="container clearfix">
-    <div class="nav-logo float-left">
-        <h2><span>NEX</span><span>GEN</span></h2>
+  <nav class="container">
+    <div class="row row-cols-2">
+        <div class="col nav-logo">
+            <h3><span>NEX</span><span>GEN</span></h3>
+        </div>
+
+        <div class="col links">
+            <ul class="nav d-flex align-items-center ">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">SERVICES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link ">SKILLS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link ">PARTNERS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link ">BLOG</a>
+                </li>
+            </ul>
+            <button type="button" class="btn">GET IN TOUCH</button> 
+        </div>
     </div>
 
-    <div class="links float-right clearfix">
-        <ul class="">
-            <li><a href="#">HOME</a></li>
-            <li><a href="#service">SERVICES</a></li>
-            <li><a href="#">SKILLS</a></li>
-            <li><a href="#partners">PARTNERS</a></li>
-            <li><a href="#">BLOG</a></li>
-        </ul>
-        <p class="btn-get-in-touch">GET IN TOUCH</p>
-    </div>
+
   </nav>
 </template>
 
@@ -26,18 +40,21 @@ export default {
 <style lang="scss" scoped>
   @import '../../assets/style/vars.scss';
 
-
     .links, .nav-logo{
-        width: 50%;
-        color: white;
+        color: $medinCut_grayNurse;
     }
 
     .nav-logo{
+        display: flex;
+        align-items: center;
         margin: 10px 0;
         opacity: 60%;
 
         h2{
-            margin:  0;
+            font-weight: bolder;
+            color: $medinCut_grayNurse;
+
+
             
             span{
                 padding: 7.5px 0;
@@ -48,7 +65,7 @@ export default {
         span:first-child{ 
             color: $colorCube_blueLagoon;
             background-color: $colorCube_blueLagoonAlpha;
-            padding-left: 20px;
+            padding: 6px 5px 6px 20px;
             border-radius: 44% 0 0 44%;
         }
 
@@ -57,34 +74,32 @@ export default {
         }
     }
 
-    .links{
+
+
+    .links{ 
+        height: 100%;
         display: flex;
         justify-content: end;
+        align-items: center;
 
-        li{
-            text-align: right;
-            display: inline-block;
-            margin: 15px 15px;
-            list-style: none;
-
-            a{
-                color: white;
-                text-decoration: none;
-            }
-            a:hover{
-                cursor: pointer;
-            }
+        a{
+            font-weight: bold;
+            color: $medinCut_grayNurse;
+            text-decoration: none;
+        }
+        a:hover{
+            cursor: pointer;
         }
     }
 
-    .btn-get-in-touch{
-        margin-left: 5px;
-        padding: 12px 20px;
+    .btn{
+        color: $medinCut_grayNurse;
+        padding: 10px 18px;
+        font-weight: bold;
         background-color: $colorCube_blueLagoon;
-        border-radius: 3px;
     }
 
-    .btn-get-in-touch:hover{ 
+    .btn-general:hover{
         transform: scale(1.02);
         cursor: pointer;
     }

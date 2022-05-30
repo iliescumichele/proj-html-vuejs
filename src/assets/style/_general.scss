@@ -5,10 +5,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.container{
-    width: 75%;
-    margin: 0 auto;
-}
+// .container{
+//     width: 75%;
+//     margin: 0 auto;
+// }
 
 .float-left{
     float: left;
@@ -16,6 +16,7 @@
 
 .float-right{
     float: right;
+    
 }
 
 .clearfix::after{
@@ -24,6 +25,16 @@
     clear: both;
 }
 
+.btn:hover{
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+.btn-general{
+    margin-left: 5px;
+    padding: 10px 18px;
+    border-radius: 3px;
+}
 
 
 .dbg{
