@@ -7,12 +7,13 @@
 
                 <div class="bigText container d-flex align-items-center justify-content-center h-75">
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col">
                             <!-- colonna sx vuota -->
                         </div>
-                        <div class="col-4">
+                        <div class="col-5 position-relative">
+                            <div class="background-for-logistic"></div>
                             <h2>Logistics that goes further.</h2>
-                            <p>For 20 years working with the most innovative inthe field of transport.</p>
+                            <p class="py-4">For 20 years working with the most innovative inthe field of transport.</p>
                             <div class="buttons">
                                 <button type="button" class="btn">GET IN TOUCH</button>
                                 <button type="button" class="btn">READ MORE</button>
@@ -43,14 +44,14 @@ export default {
 @import '../../assets/style/vars.scss';
 
     .jumbotron{
-        height: 700px;
+        height: 800px;
         background-image: url(../../assets/img/jumbo.jpg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
 
         .jumbo-content{
-            height: 700px;
+            height: 100%;
             background-color: rgba(0, 0, 0, 0.6);
         }
     }
@@ -60,8 +61,17 @@ export default {
     }
 
     .bigText{
-        .empty-space{ 
-            width: 50%;
+        .col-5{ 
+            padding-left: 100px;
+        }
+
+        .background-for-logistic{
+            background-color: $colorCube_blueLagoonAlpha;
+            height: 35px;
+            width: 320px;
+            position: absolute;
+            top: 40px;
+            left: 103px;
         }
 
         h2{ 
@@ -71,7 +81,9 @@ export default {
         }
 
         p{ 
-            color: $medinCut_grayNurse;;
+            font-size: 1.3rem;
+            font-weight: 100;
+            color: $medinCut_grayNurse;
         }
     }   
 
