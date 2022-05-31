@@ -12,7 +12,7 @@
                         </div>
                         <div class="col-5 position-relative">
                             <div class="background-for-logistic"></div>
-                            <h2>Logistics that goes further.</h2>
+                            <h2><span></span>Logistics that goes further.</h2>
                             <p class="py-4">For 20 years working with the most innovative inthe field of transport.</p>
                             <div class="buttons">
                                 <button type="button" class="btn">GET IN TOUCH</button>
@@ -62,7 +62,6 @@ export default {
 
     .bigText{
         .col-5{ 
-            padding-left: 100px;
         }
 
         .background-for-logistic{
@@ -71,7 +70,7 @@ export default {
             width: 320px;
             position: absolute;
             top: 40px;
-            left: 103px;
+            left: 16px;
         }
 
         h2{ 
@@ -84,6 +83,7 @@ export default {
             font-size: 1.3rem;
             font-weight: 100;
             color: $medinCut_grayNurse;
+            opacity: .8;
         }
     }   
 

@@ -11,19 +11,19 @@
                     <a class="nav-link" href="#">HOME</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">SERVICES</a>
+                    <a class="nav-link" href="#services">SERVICES</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link ">SKILLS</a>
+                    <a class="nav-link" href="#skills">SKILLS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link ">PARTNERS</a>
+                    <a class="nav-link" href="#partners">PARTNERS</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link ">BLOG</a>
                 </li>
             </ul>
-            <button type="button" class="btn">GET IN TOUCH</button> 
+            <button type="button" class="btn" href="#get-in-touch">GET IN TOUCH</button> 
         </div>
     </div>
 
@@ -63,7 +63,7 @@ export default {
         }
 
         span:first-child{ 
-            color: $colorCube_blueLagoon;
+            color: $materialDesign_elfGreen;
             background-color: $colorCube_blueLagoonAlpha;
             padding: 6px 5px 6px 20px;
             border-radius: 44% 0 0 44%;

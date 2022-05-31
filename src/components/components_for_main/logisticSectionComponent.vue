@@ -1,5 +1,5 @@
 <template>
-    <section id="logistic-services">
+    <section id="services">
         <div class="container h-100">
             <div class="row row-cols-3 h-100 d-flex align-items-center">
                 <div class="col ">
@@ -55,6 +55,10 @@ export default {
         .col{ 
             width: 30%;
             margin: auto 10px;
+            p{ 
+                font-size: 1.15rem;
+                color: $colorCube_manatee;
+            }
         }
     }
 
@@ -71,10 +75,6 @@ export default {
             color: $medinCut_outerSpace;
         }
 
-        p{ 
-            font-size: 1.15rem;
-            color: $colorCube_manatee;
-        }
     }
 
     .qualities{ 

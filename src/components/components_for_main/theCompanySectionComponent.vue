@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section id="skills">
         <div class="dots-top">
             <img src="../../assets/img/bullets.png" alt="">
         </div>
@@ -14,14 +14,14 @@
                     <div class="col-8 h-100 py-5">
                         <div class="text">
                             <h4>ABOUT THE NETWORK</h4>
-                            <h2 class="my-3">The Company</h2>
+                            <h2 class="my-3"><span>The</span> Company</h2>
                             <p class="my-3">With all this experties and capability comes an unrivalled commitment to customers services.</p>
                         </div>
                         <div class="percentages">   
                             <div class="container-fluid h-100">
                                 <div class="row h-100">
                                     <div class="col-3 h-100">
-                                        progress bar
+                                        
                                     </div>
                                     <div class="col-9">
                                         text
@@ -109,6 +109,10 @@ export default{
                 font-size: 3rem;
                 font-weight: 800;
                 color: white;
+
+                span{ 
+                    background-color: $materialDesign_elfGreenAlpha;
+                }
             }
 
             p{ 

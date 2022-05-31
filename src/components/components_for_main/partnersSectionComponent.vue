@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="partners">
     <div class="container h-100">
         <div class="h-100 row row-cols-6 d-flex justify-content-between align-items-center">
             <div class="col">
@@ -41,7 +41,7 @@ export default {
         img{
             width: 50%;
             color: $colorCube_manatee;
-            filter: brightness(20%);
+            opacity: .6;
         }
     }
 </style>
