@@ -16,7 +16,7 @@
                     <button type="button" class="btn my-4">READ MORE</button> 
                 </div>
                 <div class="col">
-                    <div class="my_card p-5 h-100">
+                    <div class="my-card p-5 h-100">
                         <img class="w-100 " src="../../assets/img/gallery-3.jpg" alt="">
                         <div class="text ">
                             <h3 class="my-4">Tecnology</h3>
@@ -25,7 +25,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="my_card p-5 h-100">
+                    <div class="my-card p-5 h-100">
                         <img class="w-100 " src="../../assets/img/gallery-5.jpg" alt="">
                         <div class="text">
                             <h3 class="my-4">Transport</h3>
@@ -93,7 +93,7 @@ export default {
         padding: 15px 25px;
     }
 
-    .my_card{ 
+    .my-card{ 
         border-radius: 15px;
         background-color: white;
 

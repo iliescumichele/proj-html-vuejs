@@ -54,8 +54,6 @@ export default {
             font-weight: bolder;
             color: $medinCut_grayNurse;
 
-
-            
             span{
                 padding: 7.5px 0;
                 padding-right: 5px;
@@ -63,10 +61,10 @@ export default {
         }
 
         span:first-child{ 
-            color: $materialDesign_elfGreen;
+            color: $materialDesign_morningGlory;
             background-color: $colorCube_blueLagoonAlpha;
             padding: 6px 5px 6px 20px;
-            border-radius: 44% 0 0 44%;
+            border-radius: 30px 0 0 30px;
         }
 
         span:last-chlid{ 

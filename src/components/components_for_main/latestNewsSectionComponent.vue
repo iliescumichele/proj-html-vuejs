@@ -1,6 +1,5 @@
 <template>
   <section id="latest-news">
-    <meta name="metro4:init" content="false">
     <div class="container">
         <div class="text-news">
             <h4>OUR EDITORIAL CONTENT</h4>
