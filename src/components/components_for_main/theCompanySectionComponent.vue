@@ -54,17 +54,17 @@ export default{
         return{
             cardPercentagesList: [
                 {
-                    "percentage": "90%",
+                    "percentage": "90",
                     "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                     "title": "Leadership"
                 },
                 {
-                    "percentage": "80%",
+                    "percentage": "80",
                     "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                     "title": "Psichology"
                 },
                 {
-                    "percentage": "50%",
+                    "percentage": "50",
                     "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
                     "title": "Flexibility"
                 },
