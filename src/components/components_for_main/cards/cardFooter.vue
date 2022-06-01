@@ -25,6 +25,7 @@ export default {
         color: white;
 
         p{
+          margin-left: 30px;
           font-size: 1.4rem;
           font-weight: bold;
         }

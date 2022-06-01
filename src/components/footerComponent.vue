@@ -166,6 +166,10 @@ export default {
       color: $materialDesign_elfGreen;
     }
 
+    a:hover{
+      text-decoration: underline;
+    }
+
     p{
       margin-bottom: 0;
     }

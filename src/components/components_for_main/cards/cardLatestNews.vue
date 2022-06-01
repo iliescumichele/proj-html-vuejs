@@ -25,6 +25,8 @@ export default {
 <style lang="scss" scoped>
 @import '../../../assets/style/vars';
   .my-card:hover{
+    cursor: pointer;
+
     .card-text{ 
       background-color: rgba(0, 0, 0, 0.2);
     }

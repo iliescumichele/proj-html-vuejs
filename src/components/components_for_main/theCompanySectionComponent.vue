@@ -17,18 +17,18 @@
                             <h2 class="my-3"><span>The</span> Company</h2>
                             <p class="my-3">With all this experties and capability comes an unrivalled commitment to customers services.</p>
                         </div>
-                        <div class="percentages">   
-                            <div class="container-fluid h-100">
-                                <div class="row h-100">
-                                    <div class="col-3 h-100">
-                                        
-                                    </div>
-                                    <div class="col-9">
-                                        text
-                                    </div>
-                                </div>
+                        <div class="container-fluid">
+                            <div class="percentages my-5"> 
+
+                            <cardPercentages 
+                                v-for="(cardItem, index) in cardPercentagesList"
+                                :key="`cardItem${index}`"
+                                :cardData="cardItem"
+                            />  
+ 
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -45,14 +45,40 @@
 </template>
 
 <script>
+import cardPercentages from "./cards/cardPercentages.vue"
+
 export default{
-    name: 'theCompanySectionComponent'
+    name: 'theCompanySectionComponent',
+    components: { cardPercentages },
+    data(){
+        return{
+            cardPercentagesList: [
+                {
+                    "percentage": "90%",
+                    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "title": "Leadership"
+                },
+                {
+                    "percentage": "80%",
+                    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "title": "Psichology"
+                },
+                {
+                    "percentage": "50%",
+                    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                    "title": "Flexibility"
+                },
+            ]
+        }
+    }
 }
 
 </script>
 
 <style lang="scss" scoped>
 @import '../../assets/style/vars.scss';
+
+    
 
     section{ 
         height: 800px;
@@ -95,9 +121,6 @@ export default{
 
     .text-info{ 
         .col-8{ 
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
 
             h4{ 
                 font-size: 0.9rem;
@@ -111,7 +134,7 @@ export default{
                 color: white;
 
                 span{ 
-                    background-color: $materialDesign_elfGreenAlpha;
+                    background-color: rgba(8, 129, 129, 0.35);
                 }
             }
 
@@ -120,11 +143,9 @@ export default{
                 color: $colorCube_manatee;
             }
         }
-
-        .percentages{ 
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
     }
+
+
+
+    
 </style>
