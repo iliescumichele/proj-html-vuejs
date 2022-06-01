@@ -15,24 +15,12 @@
                     </div>
                     <button type="button" class="btn my-4">READ MORE</button> 
                 </div>
-                <div class="col">
-                    <div class="my-card p-5 h-100">
-                        <img class="w-100 " src="../../assets/img/gallery-3.jpg" alt="">
-                        <div class="text ">
-                            <h3 class="my-4">Tecnology</h3>
-                            <p>Focused on developing technology solutions adapted to our client's needs.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="my-card p-5 h-100">
-                        <img class="w-100 " src="../../assets/img/gallery-5.jpg" alt="">
-                        <div class="text">
-                            <h3 class="my-4">Transport</h3>
-                            <p>We develop operational strategies to improve logistical efficiency.</p>
-                        </div>
-                    </div>
-                </div>
+                
+                <cardLogistics 
+                    v-for="(cardItem, index) in cardLogisticsList"
+                    :key="`cardItem${index}`"
+                    :cardData="cardItem"
+                />
                 
             </div>
         </div>
@@ -40,8 +28,27 @@
 </template>
 
 <script>
+import cardLogistics from "./cards/cardLogistics.vue"
+
 export default {
     name: 'logisticSectionComponent',
+    components: { cardLogistics },
+    data(){
+        return{
+            cardLogisticsList: [
+                {
+                    "thumb": "gallery-3.jpg",
+                    "title": "Technology",
+                    "description": "Focused on developing technology solutions adapted to our client's needs."
+                },
+                {
+                    "thumb": "gallery-5.jpg",
+                    "title": "Transport",
+                    "description": "We develop operational strategies to improve logistical efficiency."
+                }
+            ]
+        }
+    }
 }
 </script>
 

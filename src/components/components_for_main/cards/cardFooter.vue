@@ -12,9 +12,7 @@
 <script>
 export default {
     name: 'cardFooter',
-    props: {
-        cardData: Object
-    }
+    props: { cardData: Object }
 }
 </script>
 
@@ -29,6 +27,10 @@ export default {
         p{
           font-size: 1.4rem;
           font-weight: bold;
+        }
+
+        li:hover{
+          text-decoration: underline;
         }
 
         li{

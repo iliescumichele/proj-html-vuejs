@@ -61,8 +61,6 @@ export default {
     }
 
     .bigText{
-        .col-5{ 
-        }
 
         .background-for-logistic{
             background-color: $colorCube_blueLagoonAlpha;

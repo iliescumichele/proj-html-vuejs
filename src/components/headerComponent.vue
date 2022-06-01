@@ -2,25 +2,25 @@
   <header >
     <div class="container clearfix">
       <div class="header-sx float-left ">
-        <span>Open Hours: Mon - Sat - 9.00 - 18:00</span>
+        <span>Open Hours: {{mainInformationData.openDay}} - {{mainInformationData.closingDay}} - {{mainInformationData.openHour}} - {{mainInformationData.closingHour}}</span>
       </div>
 
 
       <div class="header-dx float-left ">
           <div class="icons-other-platforms">
-            <i class="fa-brands fa-facebook-f"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-linkedin-in"></i>
+            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
           </div>
 
           <div class="contact-email">
           <i class="fa-solid fa-envelope"></i>
-            <span>hello@example.com</span>
+            <span>{{mainInformationData.email}}</span>
           </div>
 
           <div class="contact-number">
             <i class="fa-solid fa-phone"></i>
-            <span>+1 (305) 1234-5678</span>
+            <span>{{mainInformationData.phone}}</span>
           </div>
       </div>
     </div>
@@ -29,7 +29,19 @@
 
 <script>
 export default {
-  name: 'headerComponent'
+  name: 'headerComponent',
+  data(){
+    return{
+      mainInformationData: {
+        "phone": "+1 (305) 1234-5678",
+        "email": "hello@example.com",
+        "openHour": "9.00",
+        "closingHour": "18:00",
+        "openDay": "Mon",
+        "closingDay": "Sat"
+      }
+    }
+  }
 }
 </script>
 
@@ -66,8 +78,13 @@ export default {
     }
 
     .icons-other-platforms{
-      i{
-        margin: 0 25px;
+      a{ 
+        color: $colorCube_saltpan;
+        padding: 0 12px;
+      }
+
+      i:hover{ 
+        transform: scale(1.2);
       }
     }
   }

@@ -9,18 +9,15 @@
                 <button type="button" class="btn">SEE ALL</button> 
             </div>
 
-            <div class="cards container-fluid ">
-                <div class="row row-cols-3">
-                    <div class="col position-relative">
-                        <div class="card-background">
-                            <img class="" src="../../assets/img/news-1.jpg" alt="">
-                            <div class="card-img-dim position-absolute">
-                                <div class="card-text">
-                                    ciao
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="cards container-fluid mt-3">
+                <div class="row row-cols-3 ">
+                   
+                    <cardLatestNews
+                        v-for="(cardItem, index) in cardLatestNewsList"
+                        :key="`cardItem${index}`"
+                        :cardData="cardItem"
+                    />
+
                 </div>
             </div>
         </div>
@@ -29,8 +26,37 @@
 </template>
 
 <script>
+import cardLatestNews from "./cards/cardLatestNews.vue"
+
 export default {
-    name: 'latestNewsSectionComponent'
+    name: 'latestNewsSectionComponent',
+    components: { cardLatestNews },
+    data(){
+        return{
+            cardLatestNewsList: [
+                {
+                    "thumb": "news-1.jpg",
+                    "text": "Increasing creativity is possible for everyone"
+                },
+                {
+                    "thumb": "news-2.jpg",
+                    "text": "Because market research is part of our busoness plan"
+                },
+                {
+                    "thumb": "news-3.jpg",
+                    "text": "Working from home is now a trend"
+                },
+                {
+                    "thumb": "news-4.jpg",
+                    "text": "Working in the office has its benefits"
+                },
+                {
+                    "thumb": "news-5.jpg",
+                    "text": "Increasing creativity is possible for everyone"
+                },
+            ]
+        }
+    }
 };
 </script>
 
@@ -38,8 +64,37 @@ export default {
 @import '../../assets/style/vars';
 
     section{
-        height: 700px;
+        padding-bottom: 120px;
         background-color: #ffffff;
+    }
+
+    .my-card{
+        width: 98%;
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+
+        img{
+            width: 100%;
+        }
+
+        .card-text{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            text-align: center;
+            padding: 20px 15px;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: flex;
+            align-items: flex-end;
+
+            p{
+                color: $colorCube_saltpan;
+                font-weight: bold;
+                font-size: 1.4rem;
+                line-height: 25px;
+            }
+        }
     }
 
     .text-news{
@@ -75,26 +130,6 @@ export default {
                 background-color: $colorCube_blueLagoon;
                 color: $medinCut_grayNurse;
                 padding: 9px 20px;
-            }
-        }
-    }
-
-    .cards{ 
-        .card-background{ 
-            height: 300px;
-            border-radius: 15px;
-            
-            img{ 
-                width: 100%;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: cover;
-                overflow: hidden;
-                filter: brightness(0.6);
-            }
-
-            .card-img-dim{ 
-                background-color: rgba(0, 0, 0, 0.6);
             }
         }
     }
