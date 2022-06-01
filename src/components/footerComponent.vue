@@ -23,60 +23,74 @@
               <a href="#get-in-touch" class="btn my-4">GET IN TOUCH</a>
             </div>
           </div>
-          <div class="col">
-            <div class="card p-4">
-              <p class="top-title-card">Support</p>
-              <ul>
-                <li><a href="#">Terms of use</a></li>
-                <li><a href="#">Terms of use</a></li>
-                <li><a href="#">Terms of use</a></li>
-                <li><a href="#">Terms of use</a></li>
-                <li><a href="#">Terms of use</a></li>
-                <li><a href="#">Terms of use</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card p-4">
-              <p class="top-title-card">Support</p>
-              <ul>
-                <li><i class="fa-solid fa-chevron-right"></i><a href="#">Terms of use</a></li>
-                <li><a href="#">Terms of use</a></li>
-                <li><a href="#">Terms of use</a></li>
-                <li><a href="#">Terms of use</a></li>
-                <li><a href="#">Terms of use</a></li>
-                <li><a href="#">Terms of use</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card p-4">
-              <p class="top-title-card">Support</p>
-              <ul>
-                <li><a href="#">Terms of use</a></li>
-                <li><a href="#">Terms of use</a></li>
-                <li><a href="#">Terms of use</a></li>
-                <li><a href="#">Terms of use</a></li>
-                <li><a href="#">Terms of use</a></li>
-                <li><a href="#">Terms of use</a></li>
-              </ul>
-            </div>
-          </div>
+
+          <cardFooter 
+            v-for="(cardItem, index) in cardFooterList"
+            :key="`cardItem${index}`"
+            :cardData="cardItem"
+          />
+
         </div>
       </div>
 
       <div class="container position-relative">
-        <div class="bottom-foot clearfix">
-          <div class="bottom-foot-sx float-left">a</div>
-          <div class="bottom-foot-dx float-right">d</div>
+        <div class="bottom-foot  w-100 d-flex justify-content-between">
+          <div class="bottom-foot-sx w-50">
+            <p>Enjoy the low price. We are tracking any intention of piracy.</p>
+          </div>
+          <div class="bottom-foot-dx w-50 clearfix">
+            <p class="float-right">&copy; 2020 NEXGEN is Proudly Powered by <a href="#">Codings</a>.</p>
+          </div>
         </div>
       </div>
   </footer>
 </template>
 
 <script>
+import cardFooter from "./components_for_main/cards/cardFooter.vue"
+
 export default {
-    name: 'footerComponent'
+  name: 'footerComponent',
+  components: { cardFooter },
+  data(){
+    return{
+      cardFooterList: [
+        {
+          "title": "About",
+          "links": [
+            "The Company",
+            "Institutional",
+            "Social & Events",
+            "Innovations",
+            "Environment",
+            "Technology"
+          ]
+        },
+        {
+          "title": "Transport",
+          "links": [
+            "Industialized",
+            "Chemicals",
+            "Package Liquids",
+            "Constructions",
+            "Laminated Wood",
+            "And Others"
+          ]
+        },
+        {
+          "title": "Support",
+          "links": [
+            "Responsability",
+            "Terms of use",
+            "About Cockies",
+            "Privacy Policy",
+            "Accesibility",
+            "Information"
+          ]
+        }
+      ]
+    }
+  }
 }
 </script>
 
@@ -145,7 +159,16 @@ export default {
   .bottom-foot{
     position: absolute;
     bottom: 0;
-    color: white;
+    color: $colorCube_saltpan;
+
+    a{ 
+      text-decoration: none;
+      color: $materialDesign_elfGreen;
+    }
+
+    p{
+      margin-bottom: 0;
+    }
   }
 
 </style>
